@@ -66,17 +66,42 @@ header{
     display: none; /*oculta el icono del menú por defecto */
 }
 
-.hero-image img{
-    width: 400px;
-    margin: 10% 0 0 10%;
-    height: auto;
-    transition: all 2s linear; /*transición suave para la imagen */
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* texto a la izquierda, imagen a la derecha */
+  align-items: center;
+  gap: 2rem;
+  padding: 0 8%;
+  background: linear-gradient(245.59deg, #000000 0%, #1a1a1a 100%);
 }
 
-.hero-image img:hover{
-    width: 450px; /*aumenta el tamaño de la imagen al pasar el ratón */
-    opacity: 0.7; /*reduce la opacidad de la imagen al pasar el ratón */
-    transform: translateY(-3px); /*desplaza la imagen hacia arriba al pasar el ratón */
+.hero-text {
+  max-width: 90%;
+}
+
+.hero-text h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.hero-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.hero-image {
+  text-align: center;
+}
+
+.hero-image img {
+  max-width: 80%;   /* controla que la imagen no sea tan grande */
+  height: auto;
+  border-radius: 12px; /* opcional: esquinas redondeadas */
+  transition: all 2s linear;
 }
 
 
