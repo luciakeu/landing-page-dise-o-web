@@ -1,4 +1,71 @@
 /* SOBRE MI */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /*esto mantiene el ancho y alto a pesar el padding y margin */
+    font-family: 'Inconsolata', monospace; /*fuente de consola */
+    list-style: none; /*quita los puntos de las listas */
+    text-decoration: none; /*quita el subrayado de los enlaces */
+    color: white; /*color de texto por defecto */
+}
+
+body{
+    background-color: black;
+}
+
+header{
+    position: fixed; /*fija el header en la parte superior */
+    right: 0;
+    top: 0;
+    z-index: 100; /*asegura que el header esté por encima de otros elementos */
+    width: 100%;
+    display: flex; /*flexbox para alinear los elementos */
+    align-items: center; /*centra los elementos verticalmente */
+    justify-content: space-between; /*espacio entre los elementos */
+    padding: 15px 3%; /*espaciado interno */
+    background-color: transparent; /*fondo transparente */
+}
+
+.logo{
+    font-size: 30px; /*tamaño de la fuente del logo */
+    font-weight: 800; /*negrita para el logo */
+}
+
+.navlist{
+    display: flex; /* utiliza flexbox para la lista de navegación */
+}
+
+.navlist a{
+    margin-left: 60px; /*espacio entre los enlaces */
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent; /*borde inferior transparente */
+    transition: all .5s ease; /*transición suave para el hover */
+}
+
+.navlist a:hover{
+    border-bottom: 2px solid white; /*cambia el borde inferior a blanco en hover */
+}
+
+#menu-icon{
+    display: none; /*oculta el icono del menú por defecto */
+}
+
+#menu-icon{
+    color: white; /*color del icono del menú */
+    font-size: 35px; /*tamaño del icono del menú */
+    z-index: 101; /*asegura que el icono esté por encima de otros elementos */
+    cursor: pointer; /*cursor de mano al pasar por encima */
+}
+
+#menu-toggle{
+    display: none; /*oculta el toggle del menú por defecto */
+}
+
+.menu-icon{
+    display: none; /*oculta el icono del menú por defecto */
+}
+
 .about {
   min-height: 100vh;
   display: grid;
@@ -94,4 +161,86 @@
 .contact a:hover {
   color: white;
   text-decoration: underline;
+}
+
+
+/* Esta parte es para el mediaqueries para el responsive */
+@media (max-width: 992px) {
+    section{
+        padding: 0 3%; /*reduce el espaciado interno de las secciones en pantallas pequeñas */
+        transition: .2s; /*transición suave para el espaciado interno */
+    }
+
+    .hero-text{
+        padding-top: 0;
+    }
+
+    .hero-image{
+        text-align: center; /*centra la imagen en pantallas pequeñas */
+    }
+
+    .hero-image img{
+        width: 80%; /*reduce el tamaño de la imagen en pantallas pequeñas */
+        margin: 10% 0 0 10%; /*centra la imagen horizontalmente */
+    }
+
+    .hero-text p{
+        font-size: 70%; /*reduce el tamaño del título en pantallas pequeñas */
+    }
+
+    .icons{
+        display: none; /*oculta los iconos en pantallas pequeñas */
+    }
+
+    .scroll-down{
+        display: none; /*oculta el scroll down en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-icon{
+        display: block; /*muestra el icono del menú en pantallas pequeñas */
+    }
+
+    #menu-icon{
+        display: block; /*muestra el icono del menú en pantallas pequeñas */
+    }
+
+    .hero-text{
+        text-align: center; /*centra el texto en la sección hero en pantallas pequeñas */
+        padding-top: 100px; /*añade espaciado superior para el texto en pantallas pequeñas */
+    }
+
+    .hero-image img{
+        margin: 0; /*quita el margen de la imagen en pantallas pequeñas */
+    }
+
+    .hero{
+        height: 100%; /*mantiene la altura de la sección hero en pantallas pequeñas */
+        gap: 1rem; /*reduce el espacio entre las columnas en pantallas pequeñas */
+        grid-template-columns: 1fr; /*una sola columna en pantallas pequeñas */
+    }
+
+    .navlist{
+        position: absolute; /*posiciona la lista de navegación de forma absoluta */
+        top: 100%; /*coloca la lista debajo del header */
+        right: -100%; /*alineación a la derecha */
+        width: 200px; /*ancho fijo para la lista de navegación */
+        height: 180px; /*altura fija para la lista de navegación */
+        background-color: #021719ef; /*fondo oscuro para la lista de navegación */
+        display: flex; /*utiliza flexbox para la lista de navegación */
+        flex-direction: column; /*coloca los enlaces en una columna */
+        align-items: center; /*centra los enlaces horizontalmente */
+        padding: 30px 20px; /*espaciado interno de la lista de navegación */
+        transition: all 0.5s ease-out; /*transición suave para la lista de navegación */
+    }
+
+    .navlist a{
+        margin: 7px 0; /*espacio entre los enlaces en la lista de navegación */
+        display: block; /*bloque en línea para los enlaces de la lista de navegación */
+    }
+
+    #menu-toggle:checked + label.menu-icon + ul{
+        right: 0; /*muestra la lista de navegación al activar el toggle */
+    }
 }
