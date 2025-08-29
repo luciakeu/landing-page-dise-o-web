@@ -52,3 +52,46 @@
 .contact a:hover {
   color: white;
 }
+
+
+/* página de contacto */
+.contact {
+  min-height: 100vh;
+  padding: 120px 8% 50px; /* espacio arriba para que no tape el header */
+  text-align: center;
+  background: linear-gradient(245.59deg, #385e70 0%, #131313 100%);
+  color: white; /* texto blanco */
+}
+
+.contact h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.contact p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #ddd; /* gris claro para contraste */
+}
+
+.contact ul {
+  list-style: none; /* quita los puntitos */
+  padding: 0;
+}
+
+.contact ul li {
+  margin: 15px 0;
+  font-size: 18px;
+}
+
+.contact a {
+  color: #4da6ff;
+  text-decoration: none; /* quita subrayado */
+  font-weight: bold;
+}
+
+.contact a:hover {
+  color: white;
+  text-decoration: underline;
+}
