@@ -1,0 +1,54 @@
+/* SOBRE MI */
+.about {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+  background: linear-gradient(245.59deg, #131313 0%, #31494e 50%, #385e70 100%);
+  padding: 0 8%;
+}
+
+.about-text h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.about-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* CONTACTO */
+.contact {
+  min-height: 100vh;
+  padding: 100px 8% 50px;
+  text-align: center;
+  background: linear-gradient(245.59deg, #385e70 0%, #131313 100%);
+}
+
+.contact h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.contact p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.contact ul li {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.contact a {
+  color: #4da6ff;
+  transition: color .3s ease;
+}
+
+.contact a:hover {
+  color: white;
+}
