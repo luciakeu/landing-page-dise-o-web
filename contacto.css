@@ -98,7 +98,7 @@ header{
 }
 
 .hero-image img {
-  max-width: 80%;   /* controla que la imagen no sea tan grande */
+  max-width: 70%;   /* controla que la imagen no sea tan grande */
   height: auto;
   border-radius: 12px; /* opcional: esquinas redondeadas */
   transition: all 2s linear;
@@ -111,7 +111,7 @@ header{
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 2rem;
-  background: linear-gradient(245.59deg, #131313 0%, #31494e 50%, #385e70 100%);
+  background: linear-gradient(245.59deg, #31494e 0%, #385e70 25%, #131313 75%);
   padding: 0 8%;
 }
 
@@ -132,7 +132,7 @@ header{
   min-height: 100vh;
   padding: 100px 8% 50px;
   text-align: center;
-  background: linear-gradient(245.59deg, #385e70 0%, #131313 100%);
+  background: linear-gradient(245.59deg, #31494e 0%, #385e70 25%, #131313 75%);
 }
 
 .contact h2 {
@@ -238,5 +238,28 @@ header{
 
     #menu-toggle:checked + label.menu-icon + ul{
         right: 0; /*muestra la lista de navegación al activar el toggle */
+    }
+
+    .about{
+      grid-template-columns: 1fr; /*Una sola columna*/
+      text-align: center; /*Centrar el texto*/
+      padding: 60px 20px 20px 20px; /*espacios laterales*/
+    }
+
+    .about-text{
+      margin: 0 auto 20px auto; /*Centrar el texto*/
+      max-width: 90%; 
+      font-size: 15px; /*Tamaño de letra*/
+      line-height: 1.6; 
+    }
+
+    .about-text h2{
+      font-size: 28px; /*Tamaño del título*/
+      margin-bottom: 15px; /*Espaciado inferior del título*/
+    }
+
+    .about img{
+      max-width: 200px;
+      margin: 15px auto 0 auto;
     }
 }
