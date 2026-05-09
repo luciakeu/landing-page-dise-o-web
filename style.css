@@ -56,6 +56,7 @@ header{
     font-size: 35px; /*tamaño del icono del menú */
     z-index: 101; /*asegura que el icono esté por encima de otros elementos */
     cursor: pointer; /*cursor de mano al pasar por encima */
+    display: none;
 }
 
 #menu-toggle{
@@ -265,7 +266,8 @@ section{
         display: block; /*bloque en línea para los enlaces de la lista de navegación */
     }
 
-    #menu-toggle:checked + label.menu-icon + ul{
-        right: 0; /*muestra la lista de navegación al activar el toggle */
+    .navlist.open{
+        right: 0;
     }
+
 }
