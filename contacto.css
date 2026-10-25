@@ -48,10 +48,6 @@ header{
 }
 
 #menu-icon{
-    display: none; /*oculta el icono del menú por defecto */
-}
-
-#menu-icon{
     color: white; /*color del icono del menú */
     font-size: 35px; /*tamaño del icono del menú */
     z-index: 101; /*asegura que el icono esté por encima de otros elementos */
