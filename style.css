@@ -107,12 +107,11 @@ section{
     width: 400px;
     margin: 10% 0 0 10%;
     height: auto;
-    transition: transform 1.5s linear; /*transición suave para la imagen */
+    transition: transform .4s ease; /*transición suave para la imagen */
 }
 
 .hero-image img:hover{
-    width: 450px; /*aumenta el tamaño de la imagen al pasar el ratón */
-    opacity: 0.7; /*reduce la opacidad de la imagen al pasar el ratón */
+    opacity: 0.9; /*cambia la opacidad de la imagen al pasar el ratón */
     transform: translateY(-3px) scale(1.05); /*desplaza la imagen hacia arriba al pasar el ratón */
 }
 
