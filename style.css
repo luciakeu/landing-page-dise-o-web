@@ -78,14 +78,14 @@ section{
     padding: 0 8%; /*espaciado interno de las secciones */
 }
 
-.hero-text h5{
+.hero-subtitulo{
     font-size: 14px;
     font-weight: 400;
     margin-bottom: 25px;
 }
 
-.hero-text h4{
-    font-size: 10px;
+.hero-rol{
+    font-size: 20px;
     font-weight: 600;
     margin-bottom: 10px;
 }
@@ -97,8 +97,8 @@ section{
     margin: 0 0 30px;
 }
 
-.hero-text p{
-    font-size: 80%; /*tamaño del párrafo */
+.hero-descripcion{
+    font-size: 16px; /*tamaño del párrafo */
     margin-bottom: 40px; /*espacio debajo del párrafo */
     line-height: 1.9; /*altura de línea para el párrafo */
 }
@@ -205,8 +205,8 @@ section{
         margin: 10% 0 0 10%; /*centra la imagen horizontalmente */
     }
 
-    .hero-text p{
-        font-size: 70%; /*reduce el tamaño del título en pantallas pequeñas */
+    .hero-descripcion{
+        font-size: 16px; /*reduce el tamaño del título en pantallas pequeñas */
     }
 
     .icons{
