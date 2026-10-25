@@ -211,13 +211,12 @@ section{
 }
 
 .about-image img {
-  width: 550px;
-  margin: 20px 0 0 20px;
-  height: 650px;
-  text-align: center;
+  width: 100%;
+  height: auto;
+  max-width: 450px;
 }
 
-.about-text h1 {
+.about-text h2 {
   font-size: 40px;
   margin-bottom: 20px;
   color: #fff;
@@ -311,6 +310,11 @@ section{
       padding: 60px 20px 20px 20px; /*espacios laterales*/
     }
 
+    .about-image img{
+        max-width: 250px; /*reduce el tamaño máximo de la imagen en pantallas pequeñas */
+        margin: 0 auto;
+    }
+
     .about-text{
       margin: 0 auto 20px auto; /*Centrar el texto*/
       max-width: 90%; 
@@ -318,7 +322,7 @@ section{
       line-height: 1.6; 
     }
 
-    .about-text h1{
+    .about-text h2{
       font-size: 28px; /*Tamaño del título*/
       margin-bottom: 15px; /*Espaciado inferior del título*/
     }
