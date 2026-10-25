@@ -7,6 +7,7 @@
     --color-acento: #21383d; /*botón de la flecha de scroll */
     --color-menu-movil: #021719ef; /*fondo del menú en celular */
     --degradado-principal: linear-gradient(245.59deg, #31494e 0%, #385e70 25%, #131313 75%); /*fondo del hero */
+    --color-fondo-seccion: #131313;
 
     /* fuentes */
     --fuente-texto: 'Inconsolata', monospace; /*fuente de consola para el texto */
@@ -106,7 +107,7 @@ section{
 }
 
 .hero-text h1{
-    font-family: var(--fuente-titulo); /*fuente de consola para el título */
+    font-family: var(--fuente-titulos); /*fuente de consola para el título */
     font-size: 50px; /*tamaño del título */
     line-height: 1;
     margin: 0 0 30px;
@@ -199,6 +200,35 @@ section{
     color: var(--color-gris); /*cambia el color del icono de scroll a gris en hover */
 }
 
+.about {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  align-items: center;
+  gap: 2rem;
+  background: var(--degradado-principal);
+  padding: 0 8%;
+}
+
+.about-image img {
+  width: 550px;
+  margin: 20px 0 0 20px;
+  height: 650px;
+  text-align: center;
+}
+
+.about-text h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.about-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
 /* Esta parte es para el mediaqueries para el responsive */
 @media (max-width: 992px) {
     section{
@@ -258,7 +288,7 @@ section{
         right: -100%; /*alineación a la derecha */
         width: 200px; /*ancho fijo para la lista de navegación */
         height: 180px; /*altura fija para la lista de navegación */
-        background-color: var(--color-fondo); /*fondo oscuro para la lista de navegación */
+        background-color: var(--color-menu-movil); /*fondo oscuro para la lista de navegación */
         display: flex; /*utiliza flexbox para la lista de navegación */
         flex-direction: column; /*coloca los enlaces en una columna */
         align-items: center; /*centra los enlaces horizontalmente */
@@ -273,5 +303,23 @@ section{
 
     #menu-toggle:checked + label.menu-icon + ul{
         right: 0; /*muestra la lista de navegación al activar el toggle */
+    }
+
+    .about{
+      grid-template-columns: 1fr; /*Una sola columna*/
+      text-align: center; /*Centrar el texto*/
+      padding: 60px 20px 20px 20px; /*espacios laterales*/
+    }
+
+    .about-text{
+      margin: 0 auto 20px auto; /*Centrar el texto*/
+      max-width: 90%; 
+      font-size: 16px; /*Tamaño de letra*/
+      line-height: 1.6; 
+    }
+
+    .about-text h1{
+      font-size: 28px; /*Tamaño del título*/
+      margin-bottom: 15px; /*Espaciado inferior del título*/
     }
 }
