@@ -111,7 +111,7 @@ header{
   padding: 0 8%;
 }
 
-.about-text h2 {
+.about-text h1 {
   font-size: 40px;
   margin-bottom: 20px;
   color: #fff;
@@ -131,7 +131,7 @@ header{
   background: linear-gradient(245.59deg, #31494e 0%, #385e70 25%, #131313 75%);
 }
 
-.contact h2 {
+.contact h1 {
   font-size: 40px;
   margin-bottom: 20px;
 }
@@ -249,7 +249,7 @@ header{
       line-height: 1.6; 
     }
 
-    .about-text h2{
+    .about-text h1{
       font-size: 28px; /*Tamaño del título*/
       margin-bottom: 15px; /*Espaciado inferior del título*/
     }
