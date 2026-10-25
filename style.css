@@ -1,16 +1,31 @@
+/* Variables: colores y fuentes del sitio */
+:root{
+    /* colores */
+    --color-texto: white; /*color de texto y bordes */
+    --color-fondo: black; /*fondo general de la página */
+    --color-gris: #4d4d4d; /*botón CV y hover de íconos */
+    --color-acento: #21383d; /*botón de la flecha de scroll */
+    --color-menu-movil: #021719ef; /*fondo del menú en celular */
+    --degradado-principal: linear-gradient(245.59deg, #31494e 0%, #385e70 25%, #131313 75%); /*fondo del hero */
+
+    /* fuentes */
+    --fuente-texto: 'Inconsolata', monospace; /*fuente de consola para el texto */
+    --fuente-titulos: 'Roboto Mono', monospace; /*fuente de consola para títulos */
+}
+
 /* Normalización: */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box; /*esto mantiene el ancho y alto a pesar el padding y margin */
-    font-family: 'Inconsolata', monospace; /*fuente de consola */
+    font-family: var(--fuente-texto); /*fuente de consola */
     list-style: none; /*quita los puntos de las listas */
     text-decoration: none; /*quita el subrayado de los enlaces */
-    color: white; /*color de texto por defecto */
+    color: var(--color-texto); /*color de texto por defecto */
 }
 
 body{
-    background-color: black;
+    background-color: var(--color-fondo);
 }
 
 header{
@@ -44,11 +59,11 @@ header{
 }
 
 .navlist a:hover{
-    border-bottom: 2px solid white; /*cambia el borde inferior a blanco en hover */
+    border-bottom: 2px solid var(--color-texto); /*cambia el borde inferior a blanco en hover */
 }
 
 #menu-icon{
-    color: white; /*color del icono del menú */
+    color: var(--color-texto); /*color del icono del menú */
     font-size: 35px; /*tamaño del icono del menú */
     z-index: 101; /*asegura que el icono esté por encima de otros elementos */
     cursor: pointer; /*cursor de mano al pasar por encima */
@@ -66,7 +81,7 @@ header{
     height: 100%;
     width: 100%;
     min-height: 100vh; /*mínimo alto de la sección hero */
-    background: linear-gradient(245.59deg, #31494e 0%, #385e70 25%, #131313 75%);
+    background: var(--degradado-principal);
     position: relative; /*posicionamiento relativo para el contenido */
     display: grid;
     grid-template-columns: 1fr 1fr; /*dos columnas de igual tamaño */
@@ -91,7 +106,7 @@ section{
 }
 
 .hero-text h1{
-    font-family: 'Roboto Mono', monospace; /*fuente de consola para el título */
+    font-family: var(--fuente-titulo); /*fuente de consola para el título */
     font-size: 50px; /*tamaño del título */
     line-height: 1;
     margin: 0 0 30px;
@@ -117,7 +132,7 @@ section{
 
 .hero-text a{
     display: inline-block; /*bloque en línea para el enlace */
-    background-color: #4d4d4d; /*fondo del botón */
+    background-color: var(--color-gris); /*fondo del botón */
     border: 1px solid transparent; /*borde transparente del botón */
     padding: 15px 30px; /*espaciado interno del botón */
     line-height: 1.4; /*altura de línea del botón */
@@ -130,13 +145,13 @@ section{
 
 .hero-text a:hover{
     background-color: transparent; /*cambia el fondo del botón a transparente en hover */
-    border: 1px solid white; /*cambia el borde del botón a blanco en hover */
+    border: 1px solid var(--color-texto); /*cambia el borde del botón a blanco en hover */
     transform: translateX(8px); /*desplaza el botón hacia la derecha en hover */
 }
 
 .hero-text a.proyectos{
     background-color: transparent; /*fondo transparente para el botón de proyectos */
-    border: 1px solid white; /*borde blanco para el botón de proyectos */
+    border: 1px solid var(--color-texto); /*borde blanco para el botón de proyectos */
     margin-left: 20px; /*espacio a la izquierda del botón de proyectos */
 }
 
@@ -160,7 +175,7 @@ section{
 }
 
 .icons i:hover{
-    color: #4d4d4d; /*cambia el color de los iconos a gris en hover */
+    color: var(--color-gris); /*cambia el color de los iconos a gris en hover */
     transform: translateY(-5px); /*desplaza los iconos hacia arriba en hover */
 }
 
@@ -174,14 +189,14 @@ section{
     display: block; /*bloque en línea para el icono de scroll */
     padding: 12px; /*espaciado interno del icono de scroll */
     font-size: 25px; /*tamaño del icono de scroll */
-    background-color: #21383d; /*color del icono de scroll */
+    background-color: var(--color-acento); /*color del icono de scroll */
     border-radius: 30px; /*bordes redondeados del icono de scroll */
     transition: all 0.5s ease; /*transición suave para el hover */
 }
 
 .scroll-down i:hover{
     transform: translateX(-5px); /*desplaza el icono de scroll hacia la izquierda en hover */
-    color: #4d4d4d; /*cambia el color del icono de scroll a gris en hover */
+    color: var(--color-gris); /*cambia el color del icono de scroll a gris en hover */
 }
 
 /* Esta parte es para el mediaqueries para el responsive */
@@ -243,7 +258,7 @@ section{
         right: -100%; /*alineación a la derecha */
         width: 200px; /*ancho fijo para la lista de navegación */
         height: 180px; /*altura fija para la lista de navegación */
-        background-color: #021719ef; /*fondo oscuro para la lista de navegación */
+        background-color: var(--color-fondo); /*fondo oscuro para la lista de navegación */
         display: flex; /*utiliza flexbox para la lista de navegación */
         flex-direction: column; /*coloca los enlaces en una columna */
         align-items: center; /*centra los enlaces horizontalmente */
