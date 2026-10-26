@@ -7,7 +7,11 @@
     --color-acento: #21383d; /*botón de la flecha de scroll */
     --color-menu-movil: #021719ef; /*fondo del menú en celular */
     --degradado-principal: linear-gradient(245.59deg, #31494e 0%, #385e70 25%, #131313 75%); /*fondo del hero */
-    --color-fondo-seccion: #131313;
+    --color-fondo-seccion: #131313; /*fondo de las secciones */
+    
+    /* línea de tiempo */
+    --color-linea: #385e70; /*línea, puntos y etiquetas (tono de tu degradado) */
+    --color-hito-actual: #7fc4d4; /*resalta el hito en curso */
 
     /* fuentes */
     --fuente-texto: 'Inconsolata', monospace; /*fuente de consola para el texto */
@@ -201,31 +205,105 @@ section{
 }
 
 .about {
-  min-height: 100vh;
   display: grid;
   grid-template-columns: 2fr 3fr;
   align-items: center;
   gap: 2rem;
   background: var(--degradado-principal);
-  padding: 0 8%;
-}
-
-.about-image img {
-  width: 100%;
-  height: auto;
-  max-width: 450px;
+  padding: 100px 8%;
 }
 
 .about-text h2 {
   font-size: 40px;
   margin-bottom: 20px;
-  color: #fff;
 }
 
 .about-text p {
   font-size: 16px;
   line-height: 1.8;
   margin-bottom: 20px;
+}
+
+/* Línea de tiempo */
+.timeline{
+    position: relative; /*referencia para posicionar los puntos */
+    border-left: 2px solid var(--color-linea); /*la línea vertical */
+    padding-left: 28px; /*espacio entre la línea y el texto */
+    max-width: 480px; /*ancho máximo de la línea de tiempo */
+    text-align: left; /*siempre alineada a la izquierda */
+}
+
+.hito{
+    position: relative; /*referencia para el punto de cada hito */
+    padding-bottom: 36px; /*espacio entre hitos */
+}
+
+.hito:last-child{
+    padding-bottom: 0; /*el último hito no necesita espacio abajo */
+}
+
+.hito::before{
+    content: ""; /*crea el punto sin agregar HTML */
+    position: absolute;
+    left: -37px; /*lo centra sobre la línea: 28px de padding + 1px de línea + 8px de medio punto */
+    top: 2px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%; /*convierte el cuadrado en círculo */
+    background-color: var(--color-fondo-seccion); /*relleno oscuro: punto hueco */
+    border: 2px solid var(--color-linea); /*borde del punto */
+}
+
+.hito-actual::before{
+    background-color: var(--color-hito-actual); /*punto relleno: es el presente */
+    border-color: var(--color-hito-actual);
+    box-shadow: 0 0 0 5px rgba(127, 196, 212, 0.2); /*halo alrededor del punto actual */
+}
+
+.hito-fecha{
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px; /*separa un poco las letras */
+    text-transform: uppercase; /*"EN CURSO" en mayúsculas */
+    opacity: 0.7; /*fecha más suave que el título */
+}
+
+.hito-actual .hito-fecha{
+    color: var(--color-hito-actual); /*la fecha del hito actual también se resalta */
+    opacity: 1;
+}
+
+.hito-titulo{
+    font-family: var(--fuente-titulos); /*misma fuente que tu nombre */
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+.hito-lugar{
+    font-size: 14px;
+    opacity: 0.7; /*dato secundario */
+}
+
+.hito-detalle{
+    font-size: 15px;
+    line-height: 1.6;
+    margin-top: 8px;
+    opacity: 0.85;
+}
+
+.hito-tags{
+    display: flex; /*etiquetas en fila */
+    flex-wrap: wrap; /*si no entran, bajan a la línea siguiente */
+    gap: 6px; /*espacio entre etiquetas */
+    margin-top: 10px;
+}
+
+.hito-tags li{
+    font-size: 12px;
+    padding: 3px 10px; /*espaciado interno de cada etiqueta */
+    border: 1px solid var(--color-linea); /*borde fino */
+    border-radius: 20px; /*forma de píldora */
 }
 
 /* Esta parte es para el mediaqueries para el responsive */
@@ -310,11 +388,6 @@ section{
       padding: 60px 20px 20px 20px; /*espacios laterales*/
     }
 
-    .about-image img{
-        max-width: 250px; /*reduce el tamaño máximo de la imagen en pantallas pequeñas */
-        margin: 0 auto;
-    }
-
     .about-text{
       margin: 0 auto 20px auto; /*Centrar el texto*/
       max-width: 90%; 
@@ -325,5 +398,14 @@ section{
     .about-text h2{
       font-size: 28px; /*Tamaño del título*/
       margin-bottom: 15px; /*Espaciado inferior del título*/
+    }
+
+    
+    .timeline{
+        margin: 0 auto; /*centra la línea de tiempo en pantallas pequeñas */
+    }
+
+    .about-text{
+        order: -1; /*en celular, el texto va antes que la línea de tiempo */
     }
 }
