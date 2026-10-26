@@ -216,12 +216,14 @@ section{
 .about-text h2 {
   font-size: 40px;
   margin-bottom: 20px;
+  text-align: right;
 }
 
 .about-text p {
   font-size: 16px;
   line-height: 1.8;
   margin-bottom: 20px;
+  text-align: right;
 }
 
 /* Línea de tiempo */
@@ -393,19 +395,15 @@ section{
       max-width: 90%; 
       font-size: 16px; /*Tamaño de letra*/
       line-height: 1.6; 
+        order: -1; /*en celular, el texto va antes que la línea de tiempo */
     }
 
     .about-text h2{
       font-size: 28px; /*Tamaño del título*/
       margin-bottom: 15px; /*Espaciado inferior del título*/
     }
-
     
     .timeline{
         margin: 0 auto; /*centra la línea de tiempo en pantallas pequeñas */
-    }
-
-    .about-text{
-        order: -1; /*en celular, el texto va antes que la línea de tiempo */
     }
 }
