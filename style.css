@@ -8,7 +8,6 @@
     --color-menu-movil: #021719ef; /*fondo del menú en celular */
     --degradado-principal: linear-gradient(245.59deg, #31494e 0%, #385e70 25%, #131313 75%); /*fondo del hero */
     --color-fondo-seccion: #131313; /*fondo de las secciones */
-    
     /* línea de tiempo */
     --color-linea: #385e70; /*línea, puntos y etiquetas (tono de tu degradado) */
     --color-hito-actual: #7fc4d4; /*resalta el hito en curso */
@@ -216,14 +215,14 @@ section{
 .about-text h2 {
   font-size: 40px;
   margin-bottom: 20px;
-  text-align: right;
+  text-align: center;
 }
 
 .about-text p {
   font-size: 16px;
   line-height: 1.8;
   margin-bottom: 20px;
-  text-align: right;
+  text-align: center;
 }
 
 /* Línea de tiempo */
@@ -402,7 +401,6 @@ section{
       font-size: 28px; /*Tamaño del título*/
       margin-bottom: 15px; /*Espaciado inferior del título*/
     }
-    
     .timeline{
         margin: 0 auto; /*centra la línea de tiempo en pantallas pequeñas */
     }
