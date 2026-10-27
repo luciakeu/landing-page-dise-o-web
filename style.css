@@ -1,39 +1,59 @@
 /* Variables: colores y fuentes del sitio */
-:root{
+:root {
     /* colores */
-    --color-texto: white; /*color de texto y bordes */
-    --color-fondo: black; /*fondo general de la página */
-    --color-gris: #4d4d4d; /*botón CV y hover de íconos */
-    --color-acento: #21383d; /*botón de la flecha de scroll */
-    --color-menu-movil: #021719ef; /*fondo del menú en celular */
-    --degradado-principal: linear-gradient(245.59deg, #31494e 0%, #385e70 25%, #131313 75%); /*fondo de toda la página */
-    --color-fondo-seccion: #131313; /*relleno de los puntos de la línea de tiempo */
+    --color-texto: white;
+    /*color de texto y bordes */
+    --color-fondo: black;
+    /*fondo general de la página */
+    --color-gris: #4d4d4d;
+    /*botón CV y hover de íconos */
+    --color-acento: #21383d;
+    /*botón de la flecha de scroll */
+    --color-menu-movil: #021719ef;
+    /*fondo del menú en celular */
+    --degradado-principal: linear-gradient(245.59deg, #31494e 0%, #385e70 25%, #131313 75%);
+    /*fondo de toda la página */
+    --color-fondo-seccion: #131313;
+    /*relleno de los puntos de la línea de tiempo */
     /* línea de tiempo */
-    --color-linea: #385e70; /*línea, puntos y etiquetas (tono de tu degradado) */
-    --color-hito-actual: #7fc4d4; /*resalta el hito en curso */
+    --color-linea: #385e70;
+    /*línea, puntos y etiquetas (tono de tu degradado) */
+    --color-hito-actual: #7fc4d4;
+    /*resalta el hito en curso */
 
     /* fuentes */
-    --fuente-texto: 'Inconsolata', monospace; /*fuente de consola para el texto */
-    --fuente-titulos: 'Roboto Mono', monospace; /*fuente de consola para títulos */
+    --fuente-texto: 'Inconsolata', monospace;
+    /*fuente de consola para el texto */
+    --fuente-titulos: 'Roboto Mono', monospace;
+    /*fuente de consola para títulos */
 }
 
 /* Normalización: */
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box; /*esto mantiene el ancho y alto a pesar el padding y margin */
-    font-family: var(--fuente-texto); /*fuente de consola */
-    list-style: none; /*quita los puntos de las listas */
-    text-decoration: none; /*quita el subrayado de los enlaces */
-    color: var(--color-texto); /*color de texto por defecto */
+    box-sizing: border-box;
+    /*esto mantiene el ancho y alto a pesar el padding y margin */
+    font-family: var(--fuente-texto);
+    /*fuente de consola */
+    list-style: none;
+    /*quita los puntos de las listas */
+    text-decoration: none;
+    /*quita el subrayado de los enlaces */
+    color: var(--color-texto);
+    /*color de texto por defecto */
 }
 
 /* Fondo único para toda la página */
-body::before{
-    content: ""; /*crea una capa sin agregar HTML */
-    position: fixed; /*queda quieta mientras se scrollea */
-    inset: 0; /*ocupa toda la pantalla: top, right, bottom y left en 0 */
-    z-index: -1; /*se ubica detrás de todo el contenido */
+body::before {
+    content: "";
+    /*crea una capa sin agregar HTML */
+    position: fixed;
+    /*queda quieta mientras se scrollea */
+    inset: 0;
+    /*ocupa toda la pantalla: top, right, bottom y left en 0 */
+    z-index: -1;
+    /*se ubica detrás de todo el contenido */
     background: var(--degradado-principal);
 }
 
@@ -41,374 +61,512 @@ body::before{
     background-color: var(--color-fondo);
 }*/
 
-header{
-    position: fixed; /*fija el header en la parte superior */
+header {
+    position: fixed;
+    /*fija el header en la parte superior */
     right: 0;
     top: 0;
-    z-index: 100; /*asegura que el header esté por encima de otros elementos */
+    z-index: 100;
+    /*asegura que el header esté por encima de otros elementos */
     width: 100%;
-    display: flex; /*flexbox para alinear los elementos */
-    align-items: center; /*centra los elementos verticalmente */
-    justify-content: space-between; /*espacio entre los elementos */
-    padding: 15px 3%; /*espaciado interno */
-    background-color: transparent; /*fondo transparente */
+    display: flex;
+    /*flexbox para alinear los elementos */
+    align-items: center;
+    /*centra los elementos verticalmente */
+    justify-content: space-between;
+    /*espacio entre los elementos */
+    padding: 15px 3%;
+    /*espaciado interno */
+    background-color: transparent;
+    /*fondo transparente */
 }
 
-.logo{
-    font-size: 30px; /*tamaño de la fuente del logo */
-    font-weight: 800; /*negrita para el logo */
+.logo {
+    font-size: 30px;
+    /*tamaño de la fuente del logo */
+    font-weight: 800;
+    /*negrita para el logo */
 }
 
-.navlist{
-    display: flex; /* utiliza flexbox para la lista de navegación */
+.navlist {
+    display: flex;
+    /* utiliza flexbox para la lista de navegación */
 }
 
-.navlist a{
-    margin-left: 60px; /*espacio entre los enlaces */
+.navlist a {
+    margin-left: 60px;
+    /*espacio entre los enlaces */
     font-size: 15px;
     font-weight: 600;
-    border-bottom: 2px solid transparent; /*borde inferior transparente */
-    transition: all .5s ease; /*transición suave para el hover */
+    border-bottom: 2px solid transparent;
+    /*borde inferior transparente */
+    transition: all .5s ease;
+    /*transición suave para el hover */
 }
 
-.navlist a:hover{
-    border-bottom: 2px solid var(--color-texto); /*cambia el borde inferior a blanco en hover */
+.navlist a:hover {
+    border-bottom: 2px solid var(--color-texto);
+    /*cambia el borde inferior a blanco en hover */
 }
 
-#menu-icon{
-    color: var(--color-texto); /*color del icono del menú */
-    font-size: 35px; /*tamaño del icono del menú */
-    z-index: 101; /*asegura que el icono esté por encima de otros elementos */
-    cursor: pointer; /*cursor de mano al pasar por encima */
+#menu-icon {
+    color: var(--color-texto);
+    /*color del icono del menú */
+    font-size: 35px;
+    /*tamaño del icono del menú */
+    z-index: 101;
+    /*asegura que el icono esté por encima de otros elementos */
+    cursor: pointer;
+    /*cursor de mano al pasar por encima */
 }
 
-#menu-toggle{
-    display: none; /*oculta el toggle del menú por defecto */
+#menu-toggle {
+    display: none;
+    /*oculta el toggle del menú por defecto */
 }
 
-.menu-icon{
-    display: none; /*oculta el icono del menú por defecto */
+.menu-icon {
+    display: none;
+    /*oculta el icono del menú por defecto */
 }
 
-.hero{
+.hero {
     height: 100%;
     width: 100%;
-    min-height: 100vh; /*mínimo alto de la sección hero */
-    position: relative; /*posicionamiento relativo para el contenido */
+    min-height: 100vh;
+    /*mínimo alto de la sección hero */
+    position: relative;
+    /*posicionamiento relativo para el contenido */
     display: grid;
-    grid-template-columns: 1fr 1fr; /*dos columnas de igual tamaño */
-    align-items: center; /*centra los elementos verticalmente */
-    gap: 2rem; /*espacio entre las columnas */
+    grid-template-columns: 1fr 1fr;
+    /*dos columnas de igual tamaño */
+    align-items: center;
+    /*centra los elementos verticalmente */
+    gap: 2rem;
+    /*espacio entre las columnas */
 }
 
-section{
-    padding: 0 8%; /*espaciado interno de las secciones */
+section {
+    padding: 0 8%;
+    /*espaciado interno de las secciones */
 }
 
-.hero-subtitulo{
+.hero-subtitulo {
     font-size: 14px;
     font-weight: 400;
     margin-bottom: 25px;
 }
 
-.hero-rol{
+.hero-rol {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
-.hero-text h1{
-    font-family: var(--fuente-titulos); /*fuente de consola para el título */
-    font-size: 50px; /*tamaño del título */
+.hero-text h1 {
+    font-family: var(--fuente-titulos);
+    /*fuente de consola para el título */
+    font-size: 50px;
+    /*tamaño del título */
     line-height: 1;
     margin: 0 0 30px;
 }
 
-.hero-descripcion{
-    font-size: 16px; /*tamaño del párrafo */
-    margin-bottom: 40px; /*espacio debajo del párrafo */
-    line-height: 1.9; /*altura de línea para el párrafo */
+.hero-descripcion {
+    font-size: 16px;
+    /*tamaño del párrafo */
+    margin-bottom: 40px;
+    /*espacio debajo del párrafo */
+    line-height: 1.9;
+    /*altura de línea para el párrafo */
 }
 
-.hero-image img{
+.hero-image img {
     width: 400px;
     margin: 10% 0 0 10%;
     height: auto;
-    transition: transform .4s ease; /*transición suave para la imagen */
+    transition: transform .4s ease;
+    /*transición suave para la imagen */
 }
 
-.hero-image img:hover{
-    opacity: 0.9; /*cambia la opacidad de la imagen al pasar el ratón */
-    transform: translateY(-3px) scale(1.05); /*desplaza la imagen hacia arriba al pasar el ratón */
+.hero-image img:hover {
+    opacity: 0.9;
+    /*cambia la opacidad de la imagen al pasar el ratón */
+    transform: translateY(-3px) scale(1.05);
+    /*desplaza la imagen hacia arriba al pasar el ratón */
 }
 
-.hero-text a{
-    display: inline-block; /*bloque en línea para el enlace */
-    background-color: var(--color-gris); /*fondo del botón */
-    border: 1px solid transparent; /*borde transparente del botón */
-    padding: 15px 30px; /*espaciado interno del botón */
-    line-height: 1.4; /*altura de línea del botón */
-    font-size: 14px; /*tamaño de la fuente del botón */
-    font-weight: 500; /*negrita para el texto del botón */
-    border-radius: 30px; /*bordes redondeados del botón */
+.hero-text a {
+    display: inline-block;
+    /*bloque en línea para el enlace */
+    background-color: var(--color-gris);
+    /*fondo del botón */
+    border: 1px solid transparent;
+    /*borde transparente del botón */
+    padding: 15px 30px;
+    /*espaciado interno del botón */
+    line-height: 1.4;
+    /*altura de línea del botón */
+    font-size: 14px;
+    /*tamaño de la fuente del botón */
+    font-weight: 500;
+    /*negrita para el texto del botón */
+    border-radius: 30px;
+    /*bordes redondeados del botón */
     text-transform: uppercase;
-    transition: all .5s ease; /*transición suave para el hover */
+    transition: all .5s ease;
+    /*transición suave para el hover */
 }
 
-.hero-text a:hover{
-    background-color: transparent; /*cambia el fondo del botón a transparente en hover */
-    border: 1px solid var(--color-texto); /*cambia el borde del botón a blanco en hover */
-    transform: translateX(8px); /*desplaza el botón hacia la derecha en hover */
+.hero-text a:hover {
+    background-color: transparent;
+    /*cambia el fondo del botón a transparente en hover */
+    border: 1px solid var(--color-texto);
+    /*cambia el borde del botón a blanco en hover */
+    transform: translateX(8px);
+    /*desplaza el botón hacia la derecha en hover */
 }
 
-.hero-text a.proyectos{
-    background-color: transparent; /*fondo transparente para el botón de proyectos */
-    border: 1px solid var(--color-texto); /*borde blanco para el botón de proyectos */
-    margin-left: 20px; /*espacio a la izquierda del botón de proyectos */
+.hero-text a.proyectos {
+    background-color: transparent;
+    /*fondo transparente para el botón de proyectos */
+    border: 1px solid var(--color-texto);
+    /*borde blanco para el botón de proyectos */
+    margin-left: 20px;
+    /*espacio a la izquierda del botón de proyectos */
 }
 
-.hero-text a.proyectos i{
-    vertical-align: middle; /*alineación vertical del icono */
-    margin-right: 5px; /*espacio a la derecha del icono */
+.hero-text a.proyectos i {
+    vertical-align: middle;
+    /*alineación vertical del icono */
+    margin-right: 5px;
+    /*espacio a la derecha del icono */
 }
 
-.icons{
-    position: absolute; /*posicionamiento absoluto para los iconos */
-    top: 50vh; /*posición vertical al 50% de la ventana */
-    padding: 0 3%; /*espaciado interno */
-    transform: translateY(-50%); /*ajusta la posición para centrar */
+.icons {
+    position: absolute;
+    /*posicionamiento absoluto para los iconos */
+    top: 50vh;
+    /*posición vertical al 50% de la ventana */
+    padding: 0 3%;
+    /*espaciado interno */
+    transform: translateY(-50%);
+    /*ajusta la posición para centrar */
 }
 
-.icons i{
-    display: block; /*bloque en línea para los iconos */
-    margin: 26px 0; /*espacio alrededor de los iconos */
-    font-size: 28px; /*tamaño de los iconos */
-    transition: all 0.5s ease; /*transición suave para el hover */
+.icons i {
+    display: block;
+    /*bloque en línea para los iconos */
+    margin: 26px 0;
+    /*espacio alrededor de los iconos */
+    font-size: 28px;
+    /*tamaño de los iconos */
+    transition: all 0.5s ease;
+    /*transición suave para el hover */
 }
 
-.icons i:hover{
-    color: var(--color-gris); /*cambia el color de los iconos a gris en hover */
-    transform: translateY(-5px); /*desplaza los iconos hacia arriba en hover */
+.icons i:hover {
+    color: var(--color-gris);
+    /*cambia el color de los iconos a gris en hover */
+    transform: translateY(-5px);
+    /*desplaza los iconos hacia arriba en hover */
 }
 
-.scroll-down{
-    position: absolute; /*posicionamiento absoluto para el scroll down */
-    bottom: 6%; /*posición en la parte inferior */
-    right: 3%; /*centra horizontalmente */
+.scroll-down {
+    position: absolute;
+    /*posicionamiento absoluto para el scroll down */
+    bottom: 6%;
+    /*posición en la parte inferior */
+    right: 3%;
+    /*centra horizontalmente */
 }
 
-.scroll-down i{
-    display: block; /*bloque en línea para el icono de scroll */
-    padding: 12px; /*espaciado interno del icono de scroll */
-    font-size: 25px; /*tamaño del icono de scroll */
-    background-color: var(--color-acento); /*color del icono de scroll */
-    border-radius: 30px; /*bordes redondeados del icono de scroll */
-    transition: all 0.5s ease; /*transición suave para el hover */
+.scroll-down i {
+    display: block;
+    /*bloque en línea para el icono de scroll */
+    padding: 12px;
+    /*espaciado interno del icono de scroll */
+    font-size: 25px;
+    /*tamaño del icono de scroll */
+    background-color: var(--color-acento);
+    /*color del icono de scroll */
+    border-radius: 30px;
+    /*bordes redondeados del icono de scroll */
+    transition: all 0.5s ease;
+    /*transición suave para el hover */
 }
 
-.scroll-down i:hover{
-    transform: translateX(-5px); /*desplaza el icono de scroll hacia la izquierda en hover */
-    color: var(--color-gris); /*cambia el color del icono de scroll a gris en hover */
+.scroll-down i:hover {
+    transform: translateX(-5px);
+    /*desplaza el icono de scroll hacia la izquierda en hover */
+    color: var(--color-gris);
+    /*cambia el color del icono de scroll a gris en hover */
 }
 
 .about {
-  display: grid;
-  grid-template-columns: 2fr 3fr;
-  align-items: center;
-  gap: 2rem;
-  padding: 100px 8%;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    align-items: center;
+    gap: 2rem;
+    padding: 100px 8%;
 }
 
 .about-text h2 {
-  font-size: 40px;
-  margin-bottom: 20px;
-  text-align: center;
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .about-text p {
-  font-size: 16px;
-  line-height: 1.8;
-  margin-bottom: 20px;
-  text-align: center;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 /* Línea de tiempo */
-.timeline{
-    position: relative; /*referencia para posicionar los puntos */
-    border-left: 2px solid var(--color-linea); /*la línea vertical */
-    padding-left: 28px; /*espacio entre la línea y el texto */
-    max-width: 480px; /*ancho máximo de la línea de tiempo */
-    text-align: left; /*siempre alineada a la izquierda */
+.timeline {
+    position: relative;
+    /*referencia para posicionar los puntos */
+    border-left: 2px solid var(--color-linea);
+    /*la línea vertical */
+    padding-left: 28px;
+    /*espacio entre la línea y el texto */
+    max-width: 480px;
+    /*ancho máximo de la línea de tiempo */
+    text-align: left;
+    /*siempre alineada a la izquierda */
 }
 
-.hito{
-    position: relative; /*referencia para el punto de cada hito */
-    padding-bottom: 36px; /*espacio entre hitos */
+.hito {
+    position: relative;
+    /*referencia para el punto de cada hito */
+    padding-bottom: 36px;
+    /*espacio entre hitos */
 }
 
-.hito:last-child{
-    padding-bottom: 0; /*el último hito no necesita espacio abajo */
+.hito:last-child {
+    padding-bottom: 0;
+    /*el último hito no necesita espacio abajo */
 }
 
-.hito::before{
-    content: ""; /*crea el punto sin agregar HTML */
+.hito::before {
+    content: "";
+    /*crea el punto sin agregar HTML */
     position: absolute;
-    left: -37px; /*lo centra sobre la línea: 28px de padding + 1px de línea + 8px de medio punto */
+    left: -37px;
+    /*lo centra sobre la línea: 28px de padding + 1px de línea + 8px de medio punto */
     top: 2px;
     width: 12px;
     height: 12px;
-    border-radius: 50%; /*convierte el cuadrado en círculo */
-    background-color: var(--color-fondo-seccion); /*relleno oscuro: punto hueco */
-    border: 2px solid var(--color-linea); /*borde del punto */
+    border-radius: 50%;
+    /*convierte el cuadrado en círculo */
+    background-color: var(--color-fondo-seccion);
+    /*relleno oscuro: punto hueco */
+    border: 2px solid var(--color-linea);
+    /*borde del punto */
 }
 
-.hito-actual::before{
-    background-color: var(--color-hito-actual); /*punto relleno: es el presente */
+.hito-actual::before {
+    background-color: var(--color-hito-actual);
+    /*punto relleno: es el presente */
     border-color: var(--color-hito-actual);
-    box-shadow: 0 0 0 5px rgba(127, 196, 212, 0.2); /*halo alrededor del punto actual */
+    box-shadow: 0 0 0 5px rgba(127, 196, 212, 0.2);
+    /*halo alrededor del punto actual */
 }
 
-.hito-fecha{
+.hito-fecha {
     font-size: 13px;
     font-weight: 600;
-    letter-spacing: 1px; /*separa un poco las letras */
-    text-transform: uppercase; /*"EN CURSO" en mayúsculas */
-    opacity: 0.7; /*fecha más suave que el título */
+    letter-spacing: 1px;
+    /*separa un poco las letras */
+    text-transform: uppercase;
+    /*"EN CURSO" en mayúsculas */
+    opacity: 0.7;
+    /*fecha más suave que el título */
 }
 
-.hito-actual .hito-fecha{
-    color: var(--color-hito-actual); /*la fecha del hito actual también se resalta */
+.hito-actual .hito-fecha {
+    color: var(--color-hito-actual);
+    /*la fecha del hito actual también se resalta */
     opacity: 1;
 }
 
-.hito-titulo{
-    font-family: var(--fuente-titulos); /*misma fuente que tu nombre */
+.hito-titulo {
+    font-family: var(--fuente-titulos);
+    /*misma fuente que tu nombre */
     font-size: 18px;
     font-weight: 600;
     margin-top: 4px;
 }
 
-.hito-lugar{
+.hito-lugar {
     font-size: 14px;
-    opacity: 0.7; /*dato secundario */
+    opacity: 0.7;
+    /*dato secundario */
 }
 
-.hito-detalle{
+.hito-detalle {
     font-size: 15px;
     line-height: 1.6;
     margin-top: 8px;
     opacity: 0.85;
 }
 
-.hito-tags{
-    display: flex; /*etiquetas en fila */
-    flex-wrap: wrap; /*si no entran, bajan a la línea siguiente */
-    gap: 6px; /*espacio entre etiquetas */
+.hito-tags {
+    display: flex;
+    /*etiquetas en fila */
+    flex-wrap: wrap;
+    /*si no entran, bajan a la línea siguiente */
+    gap: 6px;
+    /*espacio entre etiquetas */
     margin-top: 10px;
 }
 
-.hito-tags li{
+.hito-tags li {
     font-size: 12px;
-    padding: 3px 10px; /*espaciado interno de cada etiqueta */
-    border: 1px solid var(--color-linea); /*borde fino */
-    border-radius: 20px; /*forma de píldora */
+    padding: 3px 10px;
+    /*espaciado interno de cada etiqueta */
+    border: 1px solid var(--color-linea);
+    /*borde fino */
+    border-radius: 20px;
+    /*forma de píldora */
 }
 
 /* Esta parte es para el mediaqueries para el responsive */
 @media (max-width: 992px) {
-    section{
-        padding: 0 3%; /*reduce el espaciado interno de las secciones en pantallas pequeñas */
-        transition: .2s; /*transición suave para el espaciado interno */
+    section {
+        padding: 0 3%;
+        /*reduce el espaciado interno de las secciones en pantallas pequeñas */
+        transition: .2s;
+        /*transición suave para el espaciado interno */
     }
 
-    .hero-text{
+    .hero-text {
         padding-top: 0;
     }
 
-    .hero-image{
-        text-align: center; /*centra la imagen en pantallas pequeñas */
+    .hero-image {
+        text-align: center;
+        /*centra la imagen en pantallas pequeñas */
     }
 
-    .hero-image img{
-        width: 80%; /*reduce el tamaño de la imagen en pantallas pequeñas */
-        margin: 10% 0 0 10%; /*centra la imagen horizontalmente */
+    .hero-image img {
+        width: 80%;
+        /*reduce el tamaño de la imagen en pantallas pequeñas */
+        margin: 10% 0 0 10%;
+        /*centra la imagen horizontalmente */
     }
 
-    .icons{
-        display: none; /*oculta los iconos en pantallas pequeñas */
+    .icons {
+        display: none;
+        /*oculta los iconos en pantallas pequeñas */
     }
 
-    .scroll-down{
-        display: none; /*oculta el scroll down en pantallas pequeñas */
+    .scroll-down {
+        display: none;
+        /*oculta el scroll down en pantallas pequeñas */
     }
 }
 
 @media (max-width: 768px) {
-    .menu-icon{
-        display: block; /*muestra el icono del menú en pantallas pequeñas */
+    .menu-icon {
+        display: block;
+        /*muestra el icono del menú en pantallas pequeñas */
     }
 
-    #menu-icon{
-        display: block; /*muestra el icono del menú en pantallas pequeñas */
+    #menu-icon {
+        display: block;
+        /*muestra el icono del menú en pantallas pequeñas */
     }
 
-    .hero-text{
-        text-align: center; /*centra el texto en la sección hero en pantallas pequeñas */
-        padding-top: 100px; /*añade espaciado superior para el texto en pantallas pequeñas */
+    .hero-text {
+        text-align: center;
+        /*centra el texto en la sección hero en pantallas pequeñas */
+        padding-top: 100px;
+        /*añade espaciado superior para el texto en pantallas pequeñas */
     }
 
-    .hero-image img{
-        margin: 0; /*quita el margen de la imagen en pantallas pequeñas */
+    .hero-image img {
+        margin: 0;
+        /*quita el margen de la imagen en pantallas pequeñas */
     }
 
-    .hero{
-        height: 100%; /*mantiene la altura de la sección hero en pantallas pequeñas */
-        gap: 1rem; /*reduce el espacio entre las columnas en pantallas pequeñas */
-        grid-template-columns: 1fr; /*una sola columna en pantallas pequeñas */
+    .hero {
+        height: 100%;
+        /*mantiene la altura de la sección hero en pantallas pequeñas */
+        gap: 1rem;
+        /*reduce el espacio entre las columnas en pantallas pequeñas */
+        grid-template-columns: 1fr;
+        /*una sola columna en pantallas pequeñas */
     }
 
-    .navlist{
-        position: absolute; /*posiciona la lista de navegación de forma absoluta */
-        top: 100%; /*coloca la lista debajo del header */
-        right: -100%; /*alineación a la derecha */
-        width: 200px; /*ancho fijo para la lista de navegación */
-        height: 180px; /*altura fija para la lista de navegación */
-        background-color: var(--color-menu-movil); /*fondo oscuro para la lista de navegación */
-        display: flex; /*utiliza flexbox para la lista de navegación */
-        flex-direction: column; /*coloca los enlaces en una columna */
-        align-items: center; /*centra los enlaces horizontalmente */
-        padding: 30px 20px; /*espaciado interno de la lista de navegación */
-        transition: all 0.5s ease-out; /*transición suave para la lista de navegación */
+    .navlist {
+        position: absolute;
+        /*posiciona la lista de navegación de forma absoluta */
+        top: 100%;
+        /*coloca la lista debajo del header */
+        right: -100%;
+        /*alineación a la derecha */
+        width: 200px;
+        /*ancho fijo para la lista de navegación */
+        height: 180px;
+        /*altura fija para la lista de navegación */
+        background-color: var(--color-menu-movil);
+        /*fondo oscuro para la lista de navegación */
+        display: flex;
+        /*utiliza flexbox para la lista de navegación */
+        flex-direction: column;
+        /*coloca los enlaces en una columna */
+        align-items: center;
+        /*centra los enlaces horizontalmente */
+        padding: 30px 20px;
+        /*espaciado interno de la lista de navegación */
+        transition: all 0.5s ease-out;
+        /*transición suave para la lista de navegación */
     }
 
-    .navlist a{
-        margin: 7px 0; /*espacio entre los enlaces en la lista de navegación */
-        display: block; /*bloque en línea para los enlaces de la lista de navegación */
+    .navlist a {
+        margin: 7px 0;
+        /*espacio entre los enlaces en la lista de navegación */
+        display: block;
+        /*bloque en línea para los enlaces de la lista de navegación */
     }
 
-    #menu-toggle:checked + label.menu-icon + ul{
-        right: 0; /*muestra la lista de navegación al activar el toggle */
+    #menu-toggle:checked+label.menu-icon+ul {
+        right: 0;
+        /*muestra la lista de navegación al activar el toggle */
     }
 
-    .about{
-      grid-template-columns: 1fr; /*Una sola columna*/
-      text-align: center; /*Centrar el texto*/
-      padding: 60px 20px 20px 20px; /*espacios laterales*/
+    .about {
+        grid-template-columns: 1fr;
+        /*Una sola columna*/
+        text-align: center;
+        /*Centrar el texto*/
+        padding: 60px 20px 20px 20px;
+        /*espacios laterales*/
     }
 
-    .about-text{
-      margin: 0 auto 20px auto; /*Centrar el texto*/
-      max-width: 90%; 
-      font-size: 16px; /*Tamaño de letra*/
-      line-height: 1.6; 
-        order: -1; /*en celular, el texto va antes que la línea de tiempo */
+    .about-text {
+        margin: 0 auto 20px auto;
+        /*Centrar el texto*/
+        max-width: 90%;
+        font-size: 16px;
+        /*Tamaño de letra*/
+        line-height: 1.6;
+        order: -1;
+        /*en celular, el texto va antes que la línea de tiempo */
     }
 
-    .about-text h2{
-      font-size: 28px; /*Tamaño del título*/
-      margin-bottom: 15px; /*Espaciado inferior del título*/
+    .about-text h2 {
+        font-size: 28px;
+        /*Tamaño del título*/
+        margin-bottom: 15px;
+        /*Espaciado inferior del título*/
     }
-    .timeline{
-        margin: 0 auto; /*centra la línea de tiempo en pantallas pequeñas */
+
+    .timeline {
+        margin: 0 auto;
+        /*centra la línea de tiempo en pantallas pequeñas */
     }
 }
