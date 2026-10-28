@@ -18,8 +18,9 @@
     /* línea de tiempo */
     --color-linea: #385e70;
     /*línea, puntos y etiquetas (tono de tu degradado) */
-    --color-hito-actual: #7fc4d4;
+    --color-hito-actual: #7fc4d4; 
     /*resalta el hito en curso */
+    --color-link: #4da6ff; /*color de los links de contacto */
 
     /* fuentes */
     --fuente-texto: 'Inconsolata', monospace;
@@ -431,6 +432,36 @@ section {
     /*borde fino */
     border-radius: 20px;
     /*forma de píldora */
+}
+
+/* Contacto */
+.contact{
+    padding: 100px 8%; /*espacio arriba y abajo, y a los costados */
+    text-align: center; /*centra todo el contenido */
+}
+
+.contact h2{
+    font-size: 40px;
+    margin-bottom: 20px; /*espacio debajo del título */
+}
+
+.contact p{
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.contact ul li{
+    margin: 10px 0; /*espacio entre cada medio de contacto */
+    font-size: 18px;
+}
+
+.contact a{
+    color: var(--color-link); /*links en color para diferenciarlos del texto */
+    transition: color .3s ease; /*cambio de color suave */
+}
+
+.contact a:hover{
+    color: var(--color-texto); /*vuelve a blanco al pasar el mouse */
 }
 
 /* Esta parte es para el mediaqueries para el responsive */
