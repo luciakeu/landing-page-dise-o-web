@@ -17,6 +17,7 @@
     --color-linea: #385e70; /*línea, puntos y etiquetas (tono de tu degradado) */
     --color-hito-actual: #7fc4d4; /*resalta el hito en curso */
     --color-link: #4da6ff; /*color de los links de contacto */
+    --color-header: rgba(19, 19, 19, 0.85); /*fondo del header al scrollear*/
 
     /* fuentes */
     --fuente-texto: "Inconsolata", monospace; /*fuente de consola para el texto */
@@ -70,6 +71,16 @@ header {
     justify-content: space-between; /*espacio entre los elementos */
     padding: 15px 3%; /*espaciado interno */
     background-color: transparent; /*fondo transparente */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /*el fondo aparece suave, no de golpe */
+}
+
+
+/* Header con fondo: se activa desde script.js al scrollear */
+header.header-con-fondo {
+    background-color: var(--color-header); /*fondo oscuro semitransparente */
+    backdrop-filter: blur(8px); /*desenfoca lo que pasa por detrás */
+    -webkit-backdrop-filter: blur(8px); /*lo mismo para Safari en versiones viejas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /*sombra suave que lo separa del contenido */
 }
 
 .logo {
