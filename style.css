@@ -63,9 +63,9 @@ body::before {
     background: var(--degradado-principal);
 }
 
-/*body{
+body{
     background-color: var(--color-fondo);
-}*/
+}
 
 header {
     position: fixed;
