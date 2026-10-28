@@ -23,6 +23,18 @@
     --fuente-titulos: "Roboto Mono", monospace; /*fuente de consola para títulos */
 }
 
+/* Scroll suave al hacer clic en el menú */
+html {
+    scroll-behavior: smooth; /*desplaza suavemente en vez de saltar */
+}
+
+/* Si la persona pidió menos animaciones en su sistema, se respeta */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto; /*salto directo, sin animación */
+    }
+}
+
 /* Normalización: */
 * {
     padding: 0;

@@ -19,13 +19,16 @@
             href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Roboto+Mono:wght@200;300;400;500;600;700&display=swap"
             rel="stylesheet"
         />
+
+        <!--script de interacciones -->
+        <script src="script.js" defer></script>
     </head>
 
     <body>
         <!-- Esta sección es la cabecera de la web, la cual tendrá logo y barra de navegación -->
         <header>
             <!-- logo -->
-            <a href="index.html" class="logo">LUCIA KEUYLUIAN</a>
+            <a href="#inicio" class="logo">LUCIA KEUYLUIAN</a>
 
             <!-- para que el botón sea clickeable sin javaScript -->
             <input type="checkbox" name="checkbox" id="menu-toggle" />
@@ -36,18 +39,21 @@
 
             <!-- barra de navegación -->
             <ul class="navlist">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="sobre-mi.html">Sobre mí</a></li>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
                 <li>
-                    <a href="https://github.com/luciakeu" target="_blank"
+                    <a
+                        href="https://github.com/luciakeu"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         >Proyectos</a
                     >
                 </li>
-                <li><a href="mi-contacto.html">Contacto</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
         </header>
         <!-- Hero section -->
-        <section class="hero">
+        <section class="hero" id="inicio">
             <div class="hero-text">
                 <p class="hero-subtitulo">
                     Estudiante de ingeniería en informática
@@ -95,7 +101,9 @@
         </div>
 
         <div class="scroll-down">
-            <a href="#"><i class="ri-arrow-down-s-fill"></i></a>
+            <a href="#sobre-mi" aria-label="Ir a Sobre mí"
+                ><i class="ri-arrow-down-s-fill"></i
+            ></a>
         </div>
 
         <!-- Sección sobre mí -->
