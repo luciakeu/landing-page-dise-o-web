@@ -11,21 +11,26 @@
     /*botón de la flecha de scroll */
     --color-menu-movil: #021719ef;
     /*fondo del menú en celular */
-    --degradado-principal: linear-gradient(245.59deg, #31494e 0%, #385e70 25%, #131313 75%);
+    --degradado-principal: linear-gradient(245.59deg,
+            #31494e 0%,
+            #385e70 25%,
+            #131313 75%);
     /*fondo de toda la página */
     --color-fondo-seccion: #131313;
     /*relleno de los puntos de la línea de tiempo */
     /* línea de tiempo */
     --color-linea: #385e70;
     /*línea, puntos y etiquetas (tono de tu degradado) */
-    --color-hito-actual: #7fc4d4; 
+    --color-hito-actual: #7fc4d4;
     /*resalta el hito en curso */
-    --color-link: #4da6ff; /*color de los links de contacto */
+    --color-link: #4da6ff;
+    /*color de los links de contacto */
 
     /* fuentes */
-    --fuente-texto: 'Inconsolata', monospace;
+    --fuente-texto: "Inconsolata", monospace;
     /*fuente de consola para el texto */
-    --fuente-titulos: 'Roboto Mono', monospace;
+    --fuente-titulos:
+        "Roboto Mono", monospace;
     /*fuente de consola para títulos */
 }
 
@@ -101,7 +106,7 @@ header {
     font-weight: 600;
     border-bottom: 2px solid transparent;
     /*borde inferior transparente */
-    transition: all .5s ease;
+    transition: all 0.5s ease;
     /*transición suave para el hover */
 }
 
@@ -186,7 +191,7 @@ section {
     width: 400px;
     margin: 10% 0 0 10%;
     height: auto;
-    transition: transform .4s ease;
+    transition: transform 0.4s ease;
     /*transición suave para la imagen */
 }
 
@@ -215,7 +220,7 @@ section {
     border-radius: 30px;
     /*bordes redondeados del botón */
     text-transform: uppercase;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
     /*transición suave para el hover */
 }
 
@@ -435,33 +440,40 @@ section {
 }
 
 /* Contacto */
-.contact{
-    padding: 100px 8%; /*espacio arriba y abajo, y a los costados */
-    text-align: center; /*centra todo el contenido */
+.contact {
+    padding: 100px 8%;
+    /*espacio arriba y abajo, y a los costados */
+    text-align: center;
+    /*centra todo el contenido */
 }
 
-.contact h2{
+.contact h2 {
     font-size: 40px;
-    margin-bottom: 20px; /*espacio debajo del título */
+    margin-bottom: 20px;
+    /*espacio debajo del título */
 }
 
-.contact p{
+.contact p {
     font-size: 16px;
     margin-bottom: 20px;
 }
 
-.contact ul li{
-    margin: 10px 0; /*espacio entre cada medio de contacto */
+.contact ul li {
+    margin: 10px 0;
+    /*espacio entre cada medio de contacto */
     font-size: 18px;
 }
 
-.contact a{
-    color: var(--color-link); /*links en color para diferenciarlos del texto */
-    transition: color .3s ease; /*cambio de color suave */
+.contact a {
+    color: var(--color-link);
+    /*links en color para diferenciarlos del texto */
+    transition: color 0.3s ease;
+    /*cambio de color suave */
 }
 
-.contact a:hover{
-    color: var(--color-texto); /*vuelve a blanco al pasar el mouse */
+.contact a:hover {
+    color: var(--color-texto);
+    /*vuelve a blanco al pasar el mouse */
 }
 
 /* Esta parte es para el mediaqueries para el responsive */
@@ -469,7 +481,7 @@ section {
     section {
         padding: 0 3%;
         /*reduce el espaciado interno de las secciones en pantallas pequeñas */
-        transition: .2s;
+        transition: 0.2s;
         /*transición suave para el espaciado interno */
     }
 
