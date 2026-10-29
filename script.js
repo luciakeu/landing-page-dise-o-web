@@ -54,3 +54,32 @@ function actualizarHeader() {
 
 window.addEventListener("scroll", actualizarHeader); // se revisa cada vez que se scrollea
 actualizarHeader(); // y una vez al cargar, por si la página abre ya scrolleada
+
+
+// Carrusel de proyectos: flechas para escritorio
+const pista = document.querySelector(".carrusel-pista"); // la fila de tarjetas
+const flechaAnterior = document.querySelector(".carrusel-flecha.anterior");
+const flechaSiguiente = document.querySelector(".carrusel-flecha.siguiente");
+
+function moverCarrusel(direccion) {
+    const tarjeta = pista.querySelector(".proyecto"); // tomo una tarjeta para medirla
+    const espacio = parseFloat(getComputedStyle(pista).columnGap); // el gap de 24px definido en el CSS
+    const reducirMovimiento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    pista.scrollBy({
+        left: direccion * (tarjeta.offsetWidth + espacio), // una tarjeta hacia la izquierda (-1) o la derecha (1)
+        behavior: reducirMovimiento ? "auto" : "smooth", // sin animación si el sistema lo pide
+    });
+}
+
+function actualizarFlechas() {
+    const final = pista.scrollWidth - pista.clientWidth; // cuánto se puede desplazar en total
+    flechaAnterior.disabled = pista.scrollLeft <= 0; // al principio: no hay anterior
+    flechaSiguiente.disabled = pista.scrollLeft >= final - 1; // al final: no hay siguiente (-1 por redondeos)
+}
+
+flechaAnterior.addEventListener("click", () => moverCarrusel(-1));
+flechaSiguiente.addEventListener("click", () => moverCarrusel(1));
+pista.addEventListener("scroll", actualizarFlechas); // se actualiza al deslizar con el dedo o el mouse
+window.addEventListener("resize", actualizarFlechas); // y si cambia el tamaño de la ventana
+actualizarFlechas(); // estado inicial
