@@ -18,6 +18,8 @@
     --color-hito-actual: #7fc4d4; /*resalta el hito en curso */
     --color-link: #4da6ff; /*color de los links de contacto */
     --color-header: rgba(19, 19, 19, 0.85); /*fondo del header al scrollear*/
+    --color-tarjeta: rgba(13, 27, 30, 0.6); /*fondo semitransparente de las tarjetas de proyectos */
+    --color-borde-suave: rgba(255, 255, 255, 0.1); /*borde sutil de tarjetas e imágenes */
 
     /* fuentes */
     --fuente-texto: "Inconsolata", monospace; /*fuente de consola para el texto */
@@ -334,11 +336,144 @@ section {
     margin-top: 10px;
 }
 
-.hito-tags li {
+.hito-tags li, .proyecto-tags li {
     font-size: 12px;
     padding: 3px 10px; /*espaciado interno de cada etiqueta */
     border: 1px solid var(--color-linea); /*borde fino */
     border-radius: 20px; /*forma de píldora */
+}
+
+/* Proyectos */
+.proyectos {
+    padding: 100px 8%; /*mismo espaciado que las otras secciones */
+}
+
+.proyectos h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.proyectos-intro {
+    font-size: 16px;
+    text-align: center;
+    opacity: 0.8;
+    margin-bottom: 40px; /*espacio antes del carrusel */
+}
+
+/* Carrusel */
+.carrusel {
+    position: relative; /*referencia para ubicar las flechas */
+}
+
+.carrusel-pista {
+    display: flex; /*tarjetas en fila */
+    gap: 24px; /*espacio entre tarjetas */
+    overflow-x: auto; /*permite deslizar horizontalmente */
+    scroll-snap-type: x mandatory; /*al soltar, la tarjeta encaja en su lugar */
+    padding-bottom: 16px; /*espacio para la barra de desplazamiento */
+    scrollbar-width: thin; /*barra de desplazamiento fina */
+    scrollbar-color: var(--color-linea) transparent; /*colores de la barra */
+}
+
+.proyecto {
+    flex: 0 0 calc((100% - 48px) / 3); /*3 tarjetas visibles: el ancho menos los 2 espacios, dividido 3 */
+    scroll-snap-align: start; /*cada tarjeta encaja por su borde izquierdo */
+    display: flex;
+    flex-direction: column; /*imagen arriba, información abajo */
+    background-color: var(--color-tarjeta);
+    border: 1px solid var(--color-borde-suave);
+    border-radius: 12px; /*esquinas redondeadas */
+    overflow: hidden; /*la imagen respeta las esquinas redondeadas */
+}
+
+.proyecto-imagen {
+    display: block; /*quita el espacio fantasma debajo de la imagen */
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10; /*todas las capturas con la misma proporción */
+    object-fit: cover; /*recorta la imagen sin deformarla si no coincide la proporción */
+    object-position: top; /*si recorta, conserva la parte de arriba */
+    border-bottom: 1px solid var(--color-borde-suave);
+}
+
+.proyecto-info {
+    flex: 1; /*ocupa el resto de la tarjeta: los botones quedan siempre abajo */
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /*espacio entre título, texto, etiquetas y botones */
+    padding: 20px;
+    text-align: left;
+}
+
+.proyecto-info h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 18px;
+}
+
+.proyecto-info p {
+    font-size: 15px;
+    line-height: 1.6;
+    opacity: 0.85;
+}
+
+.proyecto-tags {
+    display: flex;
+    flex-wrap: wrap; /*si no entran, bajan a la línea siguiente */
+    gap: 6px;
+}
+
+.proyecto-links {
+    margin-top: auto; /*empuja los botones al fondo de la tarjeta */
+    display: flex;
+    gap: 10px;
+}
+
+.boton-proyecto {
+    padding: 8px 18px; /*espaciado interno del botón */
+    border: 1px solid var(--color-texto); /*botón con borde, como el de proyectos del inicio */
+    border-radius: 30px; /*forma de píldora */
+    font-size: 13px;
+    text-transform: uppercase;
+    transition: all 0.3s ease; /*transición suave para el hover */
+}
+
+.boton-proyecto.principal {
+    background-color: var(--color-gris); /*relleno, como el botón CV del inicio */
+    border-color: transparent;
+}
+
+.boton-proyecto:hover {
+    background-color: transparent;
+    border-color: var(--color-texto);
+    transform: translateY(-2px); /*sube un poco al pasar el mouse */
+}
+
+.carrusel-flecha {
+    position: absolute;
+    top: 35%; /*a la altura de las imágenes */
+    z-index: 2; /*por encima de las tarjetas */
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%; /*botón circular */
+    background-color: var(--color-acento); /*mismo color que la flecha del inicio */
+    font-size: 26px;
+    cursor: pointer; /*cursor de mano */
+    transition: opacity 0.3s ease;
+}
+
+.carrusel-flecha.anterior {
+    left: -22px; /*mitad del botón por fuera de la tarjeta */
+}
+
+.carrusel-flecha.siguiente {
+    right: -22px;
+}
+
+.carrusel-flecha:disabled {
+    opacity: 0.3; /*se apaga cuando no hay más proyectos para ese lado */
+    cursor: default;
 }
 
 /* Contacto */
@@ -397,6 +532,10 @@ section {
 
     .scroll-down {
         display: none; /*oculta el scroll down en pantallas pequeñas */
+    }
+    
+    .proyecto {
+        flex-basis: calc((100% - 24px) / 2); /*2 tarjetas visibles en tablet */
     }
 }
 
@@ -470,5 +609,21 @@ section {
 
     .timeline {
         margin: 0 auto; /*centra la línea de tiempo en pantallas pequeñas */
+    }
+    
+    .proyectos {
+        padding: 60px 20px; /*menos espacio en celular */
+    }
+
+    .proyectos h2 {
+        font-size: 28px;
+    }
+
+    .proyecto {
+        flex-basis: 85%; /*1 tarjeta y se asoma la siguiente: invita a deslizar */
+    }
+
+    .carrusel-flecha {
+        display: none; /*en celular se desliza con el dedo */
     }
 }

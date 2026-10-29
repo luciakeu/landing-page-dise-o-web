@@ -193,6 +193,99 @@
                 </p>
             </div>
         </section>
+        
+        <!-- Sección proyectos -->
+        <section class="proyectos" id="proyectos">
+            <h2>Proyectos</h2>
+            <p class="proyectos-intro">Algunos de los proyectos que hice mientras aprendo. Deslizá para ver más.</p>
+
+            <div class="carrusel">
+                <!-- flecha para ir al proyecto anterior -->
+                <button class="carrusel-flecha anterior" type="button" aria-label="Proyecto anterior">
+                    <i class="ri-arrow-left-s-line"></i>
+                </button>
+
+                <!-- tarjetas: se deslizan con el dedo, la rueda del mouse o las flechas -->
+                <ul class="carrusel-pista">
+                    <li class="proyecto">
+                        <img class="proyecto-imagen" src="assets/proyectos/clima.webp" alt="Captura de la aplicación del clima mostrando el resultado de una búsqueda" width="800" height="500" loading="lazy" />
+                        <div class="proyecto-info">
+                            <h3>Aplicación del clima</h3>
+                            <p>Buscás una ciudad y muestra temperatura, humedad y la bandera del país. El fondo cambia según el clima.</p>
+                            <ul class="proyecto-tags">
+                                <li>JavaScript</li>
+                                <li>API REST</li>
+                                <li>Fetch</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                            </ul>
+                            <div class="proyecto-links">
+                                <a class="boton-proyecto principal" href="https://aplicacion-del-clima-javascript.netlify.app/" target="_blank" rel="noopener noreferrer">Ver sitio</a>
+                                <a class="boton-proyecto" href="https://github.com/luciakeu/proyecto-app-clima" target="_blank" rel="noopener noreferrer">Código</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="proyecto">
+                        <img class="proyecto-imagen" src="assets/proyectos/formularios.webp" alt="Captura del formulario con mensajes de validación" width="800" height="500" loading="lazy" />
+                        <div class="proyecto-info">
+                            <h3>Validación de formularios</h3>
+                            <p>Revisa cada campo antes de enviar: largo mínimo de los textos, formato del email y un mensaje de error por campo.</p>
+                            <ul class="proyecto-tags">
+                                <li>JavaScript</li>
+                                <li>Expresiones regulares</li>
+                                <li>DOM</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                            </ul>
+                            <div class="proyecto-links">
+                                <a class="boton-proyecto principal" href="https://validacio-formularios-javascript.netlify.app/" target="_blank" rel="noopener noreferrer">Ver sitio</a>
+                                <a class="boton-proyecto" href="https://github.com/luciakeu/validacion-formularios" target="_blank" rel="noopener noreferrer">Código</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="proyecto">
+                        <img class="proyecto-imagen" src="assets/proyectos/login.webp" alt="Captura del login con validación" width="800" height="500" loading="lazy" />
+                        <div class="proyecto-info">
+                            <h3>Login con validación</h3>
+                            <p>Valida el email al salir del campo, confirma que las contraseñas coincidan y permite mostrarlas u ocultarlas.</p>
+                            <ul class="proyecto-tags">
+                                <li>JavaScript</li>
+                                <li>DOM</li>
+                                <li>Eventos</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                            </ul>
+                            <div class="proyecto-links">
+                                <a class="boton-proyecto principal" href="https://validacion-de-login-javascript.netlify.app/" target="_blank" rel="noopener noreferrer">Ver sitio</a>
+                                <a class="boton-proyecto" href="https://github.com/luciakeu/login-validado-javaScript" target="_blank" rel="noopener noreferrer">Código</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="proyecto">
+                        <img class="proyecto-imagen" src="assets/proyectos/juego-python.webp" alt="Captura del juego en la terminal durante un combate" width="800" height="500" loading="lazy" />
+                        <div class="proyecto-info">
+                            <h3>Aventura espacial en consola</h3>
+                            <p>Juego por turnos en la terminal: te cruzás con enemigos al azar y elegís atacar o huir hasta ganar o perder.</p>
+                            <ul class="proyecto-tags">
+                                <li>Python</li>
+                                <li>Programación orientada a objetos</li>
+                            </ul>
+                            <div class="proyecto-links">
+                                <a class="boton-proyecto" href="https://github.com/luciakeu/juego-consola-python" target="_blank" rel="noopener noreferrer">Código</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- flecha para ir al proyecto siguiente -->
+                <button class="carrusel-flecha siguiente" type="button" aria-label="Proyecto siguiente">
+                    <i class="ri-arrow-right-s-line"></i>
+                </button>
+            </div>
+        </section>
 
         <!-- Sección contacto -->
         <section class="contact" id="contacto">
