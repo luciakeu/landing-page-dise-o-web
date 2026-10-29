@@ -391,7 +391,7 @@ section {
     display: block; /*quita el espacio fantasma debajo de la imagen */
     width: 100%;
     height: auto;
-    aspect-ratio: 16 / 10; /*todas las capturas con la misma proporción */
+    aspect-ratio: 1200 / 630; /*todas las capturas con la misma proporción */
     object-fit: cover; /*recorta la imagen sin deformarla si no coincide la proporción */
     object-position: top; /*si recorta, conserva la parte de arriba */
     border-bottom: 1px solid var(--color-borde-suave);
